@@ -1,0 +1,17 @@
+
+user_1:
+  id: 1
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2019-02-26 20:32:17.930735000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2019-02-26 20:32:17.930735000 Z
+    zone: *2
+    time: *3
+  name: New Name
+  email: email@test.com
+  encrypted_password: "$2a$10$tPHlTCH13k6CrD62Ekh0rej8bKFyNbGXFpbphrJ5ahMuzarEYIsBG"
+  confirmation_token: 
+  remember_token: a303e9d3e51a7b90934ab49a690cdc21dc8c06a0

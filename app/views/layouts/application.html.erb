@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag    'application', media: 'all', "data-turbolinks-track" => true %>
+  <%= csrf_meta_tag %>
+  <% if controller_name == "feed" %>
+    <%= stylesheet_pack_tag   'application' %>
+  <% end %>
+</head>
+<body>
+  <div id="flash">
+    <% flash.each do |key, value| -%>
+      <div id="flash_<%= key %>"><%=h value %></div>
+    <% end %>
+  </div>
+
+  <%= render 'partials/nav' %>
+
+  <%= yield %>
+</body>
+</html>

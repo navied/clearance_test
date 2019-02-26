@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light">
+    <%= link_to feed_path do  %>
+      <span class="navbar-brand mb-0 h1">All the GIFs</span>
+    <% end %>
+
+    
+
+   <% if signed_in? -%>
+    <ul class="nav justify-content-end">
+      <li><%= link_to "Profile", profile_path, method: :get%></li>
+      <li><%= link_to "Sign Out", sign_out_path, method: :delete, class: "btn btn-primary" %></li>
+ 	  </ul>
+   <% else -%>
+      <%= link_to t(".sign_in"), sign_in_path, class: "btn btn-primary" %>
+   <% end -%>
+</nav>

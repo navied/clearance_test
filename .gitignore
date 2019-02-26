@@ -1,5 +1,6 @@
 *.rbc
 capybara-*.html
+dump.rdb
 .rspec
 /log
 /tmp
@@ -8,42 +9,63 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
-*.orig
+**.orig
 rerun.txt
 pickle-email-*.html
 
-# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/master.key
-
-# Only include if you have production secrets in this file, which is no longer a Rails default
-# config/secrets.yml
-
-# dotenv
-# TODO Comment out this rule if environment variables can be committed
-.env
-
-## Environment normalization:
+## Environment normalisation:
 /.bundle
 /vendor/bundle
 
-# these should all be checked in to normalize the environment:
+# these should all be checked in to normalise the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+.sass-cache
+.byebug_history
+.idea
 
 # if using bower-rails ignore default bower_components path bower.json files
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
 
+launch.json
+
 # Ignore pow environment settings
 .powenv
 
-# Ignore Byebug command history file.
-.byebug_history
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules
 
-# Ignore node_modules
-node_modules/
+# Ignore compiled min files
+assets/css/main.min.css
+dist/main.min.js
 
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+.DS_Store
+
+public/assets/.sprockets-manifest-b11070f6b80f788cbfde783e401bc4ee.json
+
+log/appsignal.log
+
+.vscode/settings.json
+/public/packs-test
+/public/packs
+/public/assets/
+/node_modules/public/packs
+/public/packs-test
+/node_modules
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
